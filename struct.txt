@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Tabela----------------------*/
+/*Criando o a struct*/
+	struct ficha_de_aluno{
+		char nome[50];
+		char disciplina[30];
+		char email[40];
+		float nota_prova1;
+		float nota_prova2;
+		int matricula, telefone;
+		
+		
+	}aluno ;
+/*----------------------------*/
+int main(void) {
+	
+	printf("\n--------- Cadastro de aluno ---------\n\n\n");
+	
+	printf("Nome do aluno:");
+	fflush(stdin);
+	
+	fgets(aluno.nome, 50, stdin);
+	
+	printf("Disciplina: ");
+	fflush(stdin);
+	fgets(aluno.disciplina, 30,stdin);
+	
+	printf("E-mail: ");
+	fflush(stdin);
+	fgets(aluno.email, 40,stdin);
+	
+	printf("Informe a 1a. nota: ");	
+	scanf("%f", &aluno.nota_prova1);
+	
+	printf("Informe a 2a. nota: ");	
+	scanf("%f", &aluno.nota_prova2);
+	
+	printf("Informe a matricula: ");	
+	scanf("%f", &aluno.matricula);
+	
+	printf("Informe o telefone: ");	
+	scanf("%f", &aluno.telefone);
+	
+/*------------------------------------------------------------------*/
+	
+	printf("\n\n -------- Lendo os dados da struct --------\n\n");
+	printf("Nome: %s", aluno.nome);
+	printf("Disciplina: %s", aluno.disciplina);
+	printf("E-mail: %s", aluno.email);
+	
+	printf("Nota da prova 1: %.2f\n", aluno.nota_prova1);
+	printf("Nota da prova 2: %.2f\n", aluno.nota_prova2);
+	
+	printf("Matricula: %.d\n", aluno.matricula);
+	printf("telefone: %.d\n", aluno.telefone);
+	
+	getchar();
+	return(0);
+}
